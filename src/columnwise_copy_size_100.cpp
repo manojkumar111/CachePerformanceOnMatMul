@@ -16,12 +16,7 @@ void parsec_roi_end()
 }
 
 void columnwise_copy(int a[10][10], int rows, int cols) {
-    int i, j;
-   for(j=0; j<cols; ++j){
-   	for(i=0;i<rows;++i){
-   		cout<<a[i][j]<<" ";
-	   }
-   }
+
 }
 
 
@@ -40,6 +35,7 @@ int main (int argc, char* argv[]) {
 
     int rows = 10;
     int cols = 10;
+    int dest[10][10];
     int matrix[10][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
                           {11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
                           {21, 22, 23, 24, 25, 26, 27, 28, 29, 30},
@@ -52,7 +48,11 @@ int main (int argc, char* argv[]) {
                           {91, 92, 93, 94, 95, 96, 97, 98, 99, 100}};
     printMatrix(matrix, rows, cols);
     parsec_roi_begin();
-	columnwise_copy(matrix, rows, cols);
+    for(int j=0; j<cols; ++j){
+   	 for(int i=0;i<rows;++i){
+   	   dest[i][j] = matrix[i][j];
+	 }
+    }
     parsec_roi_end();
 	return 0;
 }
