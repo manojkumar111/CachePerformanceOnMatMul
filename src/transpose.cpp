@@ -17,7 +17,6 @@ void parsec_roi_end()
 
 
 void printMatrix(int a[10][10], int rows, int cols) {
-   cout<<"The matrix is:"<<endl;
    int i, j;
    for(i=0; i<rows; ++i) {
       for(j=0; j<cols; ++j)
@@ -42,7 +41,7 @@ int main (int argc, char* argv[]) {
                           {71, 72, 73, 74, 75, 76, 77, 78, 79, 80},
                           {81, 82, 83, 84, 85, 86, 87, 88, 89, 90},
                           {91, 92, 93, 94, 95, 96, 97, 98, 99, 100}};
-    cout << "original matrix";
+    cout << "original matrix\n";
     printMatrix(matrix, rows, cols);
     parsec_roi_begin();
    for(int i=0; i<rows; ++i)
@@ -50,7 +49,7 @@ int main (int argc, char* argv[]) {
       dest[j][i] = matrix[i][j];
    }
     parsec_roi_end();
-    cout << "transposed matrix";
+    cout << "transposed matrix\n";
     printMatrix(dest, rows, cols);
 	return 0;
 }
