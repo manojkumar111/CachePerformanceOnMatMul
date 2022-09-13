@@ -31,7 +31,7 @@ int main (int argc, char* argv[]) {
     printArray(input_array, 9);
 
 	int index_array[5]={0,3,5,4,7};
-	int dest_array[9];
+	int dest_array[5];
 	int index_size=5;
 	parsec_roi_begin();
 	for(int i=0;i<index_size;i++)
@@ -41,6 +41,10 @@ int main (int argc, char* argv[]) {
 	}
 	parsec_roi_end();
 
-	cout<<"Modified array after applying gather \n";
-	printMatrix(input_array, 9);
+	cout<<"dest array after applying gather \n";
+	for(j=0;j<5;j++)
+	{
+		cout<<dest_array[j]<<" ";
+	}
+
 }
