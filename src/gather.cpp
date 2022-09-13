@@ -15,17 +15,19 @@ void parsec_roi_end()
 
 }
 
-void printArray(int a[9], int arr_size) {
-	for(int j=0;j<arr_size;j++)
-	{
-		cout<<a[j]<<" ";
-	}
-	cout<<"\n";
+void printMatrix(int a[10][10], int rows, int cols) {
+   int i, j;
+   for(i=0; i<rows; ++i) {
+      for(j=0; j<cols; ++j)
+      cout<<a[i][j]<<" ";
+      cout<<endl;
+   }
+   cout<<endl;
 }
 
 int main (int argc, char* argv[]) {
 
-	int i, j, index;
+	int i, j;
 	int rows = 10;
     int cols = 10;
     int input_array[10][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},

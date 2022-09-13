@@ -27,7 +27,7 @@ void printMatrix(int a[10][10], int rows, int cols) {
 
 int main (int argc, char* argv[]) {
 
-	int i,index;
+	int i;
 	int rows = 10;
     int cols = 10;
     int input_array[10][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
